@@ -50,6 +50,12 @@ Foquei meu desenvolvimento no "visual" do painel para aperfeiçoar minhas habili
 - UI: minor fixes
 ```
 
+- 07/07
+
+> [#5d9b95935d777c2313852077ded77c2b738cbb39](https://github.com/matheus-delazeri/curriculum-maker/commit/5d9b95935d777c2313852077ded77c2b738cbb39)
+```
+- Feat: mask sensitive data of users
+```
 
 ---
 Projeto entregue para a disciplina de [Desenvolvimento de Software para a Web](http://github.com/andreainfufsm/elc1090-2024a) em 2024a
