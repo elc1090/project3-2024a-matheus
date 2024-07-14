@@ -6,18 +6,20 @@ Acesso: https://curriculum-app-4f416178ce59.herokuapp.com/
 
 Repositório Original: https://github.com/matheus-delazeri/curriculum-maker
 
-#### Desenvolvedor
-Matheus Delazeri, Sistema de Informação
+Desenvolvedor: Matheus Delazeri, Sistema de Informação
 
-#### Descrição
+## Descrição
 Esta aplicação tem como intuito facilitar a criação de currículos para pessoas pouco instruídas na área da computação. O usuário precisa apenas informar suas informações e experiências, o resto é organizado por revisores e montadores.
 A aplicação está disponivel em inglês e português.
 
-### > Guia para Testes
+## Guia para Testes
 
-O cronograma de testes desenvolvido para esta aplicação divide-se em 2 etapas. A primeira ocorre do ponto de vista do usuário final, que deseja criar um novo currículo para si próprio. Já a segunda, de um revisor de currículos, que deseja realizar correções os currículos criados pelos usuários finais.
+O cronograma de testes desenvolvido para esta aplicação divide-se em 3 etapas. 
+- **Etapa 1:** Ocorre do ponto de vista do usuário final, que deseja criar um novo currículo para si próprio;
+- **Etapa 2:** Ocorre do ponto de um revisor de currículos, que deseja realizar correções nos currículos criados pelos usuários;
+- **Etapa 3:** Esta etapa explora algumas funcionalidades adicionais da plataforma.
 
-#### **1. Ponto de vista do usuário final**
+### **1. Ponto de vista do usuário final**
 
 Para esta etapa, você deverá acessar a plataforma (https://curriculum-app-4f416178ce59.herokuapp.com/) com as seguintes credenciais:
 - E-mail: usuario@gmail.com
@@ -31,7 +33,7 @@ Acesse o menu "Curriculos" na barra de navegação e clique em "Visualizar" no c
 
 **1.2. Criar um currículo**
 
-Acesse o menu "Currículos" e clique em "+ Novo", na _grid_ de currículos. Feito isso, preencha os campos com algumas informações e adicione **1** educação e **1** experiência. Após finalizar o preenchimento dos campos, clique em "Salvar".
+Acesse o menu "Currículos" e clique em "+ Novo", na _grid_ de currículos. Feito isso, preencha os campos com algumas informações. Após finalizar o preenchimento dos campos, clique em "Salvar".
 Feito isso, o currículo será criado e estará disponível para que revisores possam juntar-se a ele e realizarem o processo de revisão.
 
 **1.3. Rejeitar um currículo**
@@ -40,21 +42,81 @@ Após um revisor finalizar a revisão do currículo do usuário, o currículo se
 Para testar esta funcionalidade, acesse o menu "Currículos" e clique em "Visualizar" no currículo de ID **2**. Assim que o currículo se abrir, navegue até a aba "Resultado" e clique em "Rejeitar". Assim, o currículo chegará em seu status final e não sofrerá mais ações.
 
 
-#### Desenvolvimento
+### **2. Ponto de vista do revisor**
+
+Para esta etapa, você deverá acessar a plataforma (https://curriculum-app-4f416178ce59.herokuapp.com/) com as seguintes credenciais:
+- E-mail: revisor@gmail.com
+- Senha: revisor123
+
+**2.1. Juntar-se a um currículo**
+
+Para começar a revisar um currículo, é necessário juntar-se a ele primeiro. Para isso, navegue até o menu "Painel de Controle" e clique em "Juntar-se" em um dos currículos disponíveis na _grid_ de currículos novos.
+
+*De preferência, junte-se ao currículo criado no teste **1.2**.
+
+**2.2. Editar o conteúdo de um currículo**
+
+Para este teste, mantenha-se na página do currículo ao qual você se cadastrou no teste **2.1**.
+
+*Caso tenha fechado a página, navegue até o menu "Revisões" e clique em "Visualizar" no currículo que deseja editar.
+
+Agora, abra a aba "Conteúdo" e monte um currículo simples utilizando as informações disponíveis na aba "Informações". Você pode inserir variáveis para referenciar os campos presentes na aba de informações.
+Por exemplo, ao adicionar _{customer.name}_ no conteúdo, o valor cadastrado no campo "Nome" (da aba "Informações") será renderizado no currículo final.
+
+Assim que estiver OK, clique em "Salvar" para salvar a versão atual do currículo. Realize mais algumas edições e clique em "Salvar" novamente, para gerar uma nova versão.
+
+**2.3. Restaurar versão**
+
+Ao clicar em "Salvar" na aba "Conteúdo", uma nova versão do currículo é gerada. Você pode visualizar todo o histórico de versões na aba "Versões". 
+
+Para este teste, navegue até a aba "Versões" e clique em "Restaurar" na versão mais antiga do currículo. Feito isso, navegue até a aba "Conteúdo" e visualize a versão restaurada.
+
+**2.4. Finalize a revisão**
+
+Após realizar todos os ajustes necessários, o revisor deve clicar em "Finalizar Revisão", na aba "Conteúdo", para que o currículo mude para o status "Aguardando Aprovação", onde o usuário final deverá decidir se aprova ou não o currículo criado.
+
+Para este teste, realize o procedimento de finalização de revisão, navegando até a aba "Conteúdo" e clicando em "Finalizar Revisão".
+
+Feito isso, navegue até aba "Resultado" para verificar o resultado final.
+
+
+### **3. Adicionais**
+
+Esta etapa explora algumas funcionalidades adicionais da plataforma.
+
+**3.1. Alterando a senha do usuário**
+
+Com o usuário logado no momento, clique no menu no canto superior direito (onde está o nome do usuário atual) e então no item "Perfil". Feito isso, atualize a senha do usuário para "novasenha123".
+
+Faça _logout_ e tente acessar a plataforma com esta nova senha.
+
+**3.2. Alterando o tema**
+
+Para alterar o tema do painel, acesse o mesmo menu "Perfil" do teste **3.1** e selecione um novo tema na seção "Preferências do Perfil".
+
+*Lembre-se de clicar em "Salvar" para que o tema seja aplicado.
+
+**3.3. Alterando a linguagem**
+
+O painel, no momento, está disponível nas linguagens `pt_BR` (Português) e `en` (Inglês). Para trocar a linguagem utilizada, navegue até o menu "Perfil" novamente e, na aba "Preferências do Perfil", altere o campo "Localidade".
+
+*Lembre-se de clicar em "Salvar" para que a localidade seja aplicada.
+
+## Desenvolvimento
 Foquei meu desenvolvimento no "visual" do painel para aperfeiçoar minhas habilidades em _frontend_. A ideia da aplicação é ser intuitva e agradável visualmente, com um visual "clean".
 
-#### Tecnologias
+## Tecnologias
 - Laravel;
 - [Livewire](https://laravel-livewire.com/);
 - [PowerGrid](https://livewire-powergrid.com/).
 
-#### Ambiente de desenvolvimento
+## Ambiente de desenvolvimento
 - PHP Storm;
 
-#### Referências e créditos
+## Referências e créditos
 - [Heroicons](https://heroicons.com/): ícones utilizados no painel;
 
-#### Devlog
+## Devlog
 
 - 27/06
 
