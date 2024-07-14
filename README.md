@@ -57,5 +57,20 @@ Foquei meu desenvolvimento no "visual" do painel para aperfeiçoar minhas habili
 - Feat: mask sensitive data of users
 ```
 
+- 14/07
+
+> [#2196c27812e53c7a5b90326cd66aff89b905f254](https://github.com/matheus-delazeri/curriculum-maker/commit/2196c27812e53c7a5b90326cd66aff89b905f254)
+```
+- Feat: finished status flow
+- Dev: removed 'assembler' from workflow
+- Feat: allow view curriculum approved as PDF
+- pt_BR: added general translations
+```
+> [#661dad297ddf51590aff2874ccdd897376eef303](https://github.com/matheus-delazeri/curriculum-maker/commit/661dad297ddf51590aff2874ccdd897376eef303)
+```
+- Fix: render of experiences and educations using variable
+- UI: dark mode var text to white
+```
+
 ---
 Projeto entregue para a disciplina de [Desenvolvimento de Software para a Web](http://github.com/andreainfufsm/elc1090-2024a) em 2024a
